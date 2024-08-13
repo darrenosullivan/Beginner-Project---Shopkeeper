@@ -1,0 +1,31 @@
+
+items = {
+    "Bubblegum": 202,
+    "Toffee": 118,
+    "Ice cream": 2250,
+    "Milk chocolate": 1680,
+    "Doughnut": 1075,
+    "Pancake": 80
+}
+
+# Print the header
+print("Earned amount:")
+
+# Iterate over the items and print their names and prices
+for item, price in items.items():
+    print(f"{item}: ${price}")
+
+income = sum(items.values())
+
+print(f"Income:${income}")
+
+
+Staff_expenses = input("Staff expenses?")
+Other_expenses = input("Other expenses?")
+
+Staff_expenses = int(Staff_expenses)
+Other_expenses = int(Other_expenses)
+net_income = income - Staff_expenses - Other_expenses
+
+print(f"Staff expenses:\n${Staff_expenses}\nOther Expenses:\n${Other_expenses}\n Net income:${net_income}")
+
